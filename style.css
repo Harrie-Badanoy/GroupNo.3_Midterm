@@ -1,0 +1,177 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #1e3a8a; /* deep blue */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo / Title */
+nav .logo {
+    color: lightgreen;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Center nav (main links) */
+nav .nav-center ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* spacing between links */
+}
+
+nav .nav-center ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav .nav-center ul li a:hover {
+    background-color: #fbbf24; /* amber */
+    color: #1e3a8a;
+}
+
+/* Right nav (login/signup) */
+nav .nav-right ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav .nav-right ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Login button style */
+nav .nav-right ul li a.login {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+nav .nav-right ul li a.login:hover {
+    background-color: #fff;
+    color: #1e3a8a;
+}
+
+/* Get Started button style */
+nav .nav-right ul li a.signup {
+    background-color: #fbbf24;
+    color: #1e3a8a;
+    font-weight: 700;
+}
+
+nav .nav-right ul li a.signup:hover {
+    background-color: #f59e0b;
+    color: #fff;
+}
+
+/* Section Styles */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Section Backgrounds */
+#home {
+    background: linear-gradient(135deg, #93c5fd, #60a5fa);
+    color: #fff;
+}
+
+#about {
+    background-color: #fff;
+}
+
+#mentors {
+    background-color: #f3f4f6;
+}
+
+#categories {
+    background-color: #fff;
+}
+
+#contact {
+    background-color: #f3f4f6;
+}
+
+#login, #signup {
+    background-color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e3a8a;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav .nav-center ul, nav .nav-right ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-center ul li, nav .nav-right ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 20px;
+    }
+
+    section h1 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}

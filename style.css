@@ -1,281 +1,510 @@
-/* ================= GOOGLE FONT ================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* ================= GLOBAL STYLES ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-body {
-    background: #0f172a;
+body{
+    background:#0f172a;
+    color:#fff;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:600;
+}
+
+.logo span{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#ddd;
+    font-size:15px;
+    position:relative;
+}
+
+nav ul li a:hover{
+    color:#fff;
+}
+
+.login{
+    padding:6px 18px;
+    border:1px solid #38bdf8;
+    border-radius:20px;
+}
+
+.signup{
+    padding:6px 18px;
+    background:#38bdf8;
+    border-radius:20px;
+    color:#000;
+    font-weight:500;
+}
+
+.signup:hover{
+    background:#0ea5e9;
+}
+
+.hamburger{
+    font-size:24px;
+    cursor:pointer;
+    color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#cbd5e1;
+}
+
+.hero-btn{
+    padding:12px 30px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.hero-btn:hover{
+    background:#0ea5e9;
+}
+
+/* FEATURES */
+
+.features{
+    padding:100px 60px;
+    text-align:center;
+}
+
+.features h2{
+    font-size:32px;
+    margin-bottom:50px;
+}
+
+.feature-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:40px 30px;
+    border-radius:15px;
+    width:300px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.card p{
+    color:#cbd5e1;
+}
+
+/* SIDEBAR */
+
+#sidebar-toggle{
+    display:none;
+}
+
+.sidebar{
+    position:fixed;
+    left:-250px;
+    top:0;
+    width:250px;
+    height:100%;
+    background:#111827;
+    padding-top:100px;
+    transition:0.4s;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:15px 30px;
+}
+
+.sidebar ul li a{
+    text-decoration:none;
+    color:#ddd;
+}
+
+.sidebar ul li:hover{
+    background:#1f2937;
+}
+
+#sidebar-toggle:checked ~ .sidebar{
+    left:0;
+}
+
+/* CONTENT */
+
+.content{
+    margin-top:80px;
+}
+
+/* GET STARTED PAGE */
+
+.getstarted-page{
+    font-family:Arial;
+    background:#0f172a  ;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.getstarted-page .container{
+    background:white;
+    padding:30px;
+    width:320px;
+    border-radius:10px;
+    text-align:center;
+    color:black;
+}
+
+.getstarted-page .buttons a{
+    text-decoration:none;
+    background:#667eea;
+    color:white;
+    padding:10px 20px;
+    margin:5px;
+    display:inline-block;
+    border-radius:5px;
+}
+
+.getstarted-page .buttons a:hover{
+    background:#5563d1;
+}
+
+.getstarted-page .form-box{
+    display:none;
+    margin-top:20px;
+}
+
+.getstarted-page .form-box:target{
+    display:block;
+}
+
+.getstarted-page input{
+    width:90%;
+    padding:10px;
+    margin:5px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.getstarted-page button{
+    padding:10px;
+    background:#667eea;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.getstarted-page button:hover{
+    background:#5563d1;
+}
+
+.role-buttons a{
+    text-decoration:none;
+    background:#667eea;
+    color:white;
+    padding:10px 20px;
+    margin:5px;
+    display:inline-block;
+    border-radius:5px;
+}
+
+.role-buttons a:hover{
+    background:#5563d1;
+}
+
+/* ABOUT PAGE */
+
+.about-section{
+    padding:100px 60px;
+    text-align:center;
+}
+
+.about-section h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-section p{
+    max-width:800px;
+    margin:auto;
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+.mission-vision{
+    padding:80px 60px;
+}
+
+.mission-vision .feature-box{
+    margin-top:40px;
+}
+
+.mission-vision .card{
+    transition:0.3s;
+}
+
+.mission-vision .card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.5);
+}
+
+.role-buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:10px;
+}
+
+.role-buttons a{
+    text-decoration:none;
+    background:#667eea;
+    color:white;
+    padding:10px 20px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.role-buttons a:hover{
+    background:#5563d1;
+}
+
+/* FORM BOX ANIMATION */
+
+.getstarted-page .form-box{
+    display:none;
+    margin-top:20px;
+    animation:fadeIn 0.4s ease;
+}
+
+.getstarted-page .form-box:target{
+    display:block;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.about {
+    padding: 120px 60px 60px 60px; /* top padding = space sa navbar, bottom padding = extra space sa baba */
+    max-width: 5000px;
+    margin: 0 auto;
+    background-color: rgba(15,23,42,0.9); /* optional, para readable */
+    border-radius: 8px;
     color: #fff;
 }
 
-/* ================= NAVBAR ================= */
-nav {
+/* Mentor and Category Cards */
+.mentor-cards, .feature-box {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-.nav-center ul li a:hover{
+.mentor-cards .card, .feature-box .card {
+    background: rgba(255,255,255,0.05);
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.mentor-cards .card h3, .feature-box .card h3 {
     color: #38bdf8;
+    margin-bottom: 10px;
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 1px;
+/* Categories Page */
+.categories-section {
+    padding: 120px 60px 60px 60px;
+    text-align: center;
 }
 
-.logo span {
-    color: #38bdf8;
+.categories-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #ddd;
-    font-size: 15px;
-    transition: 0.3s ease;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: -5px;
-    background: #38bdf8;
-    transition: 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #fff;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-.login {
-    padding: 6px 18px;
-    border: 1px solid #38bdf8;
-    border-radius: 20px;
-}
-
-.signup {
-    padding: 6px 18px;
-    background: #38bdf8;
-    border-radius: 20px;
-    color: #000;
-    font-weight: 500;
-}
-
-.login:hover {
-    background: #38bdf8;
-    color: black;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.signup:hover {
-    background: #0ea5e9;
-    text-decoration: none;
-}
-
-nav ul li a.login::after,
-nav ul li a.signup::after {
-    content: none;
-}
-
-.hamburger {
-    font-size: 24px;
+.category-card {
+    background: linear-gradient(135deg, rgba(56,189,248,0.2), rgba(14,165,233,0.2));
+    border-radius: 15px;
+    padding: 30px 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.category-card .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
     color: #38bdf8;
+    margin-bottom: 10px;
 }
 
-/* ================= HERO ================= */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.category-card p {
+    color: #cbd5e1;
+}
+
+/* Contact Page */
+.contact-section {
+    padding: 120px 60px 60px 60px;
+}
+
+.contact-section h2 {
+    font-size: 36px;
     text-align: center;
-    padding: 0 20px;
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    font-weight: 700;
     margin-bottom: 20px;
 }
 
-.hero-text p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #cbd5e1;
-}
-
-.hero-btn {
-    padding: 12px 30px;
-    background: #38bdf8;
-    color: #000;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.hero-btn:hover {
-    background: #0ea5e9;
-    transform: scale(1.05);
-}
-
-/* ================= FEATURES ================= */
-.features {
-    padding: 100px 60px;
+.contact-section p {
     text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 40px;
 }
 
-.features h2 {
-    font-size: 32px;
-    margin-bottom: 50px;
-}
-
-.feature-box {
+.contact-grid {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    padding: 40px 30px;
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    background: rgba(255,255,255,0.05);
+    padding: 30px 20px;
     border-radius: 15px;
-    width: 300px;
-    transition: 0.4s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-    border-color: #38bdf8;
-}
-
-.card h3 {
-    margin-bottom: 15px;
+.contact-info h3 {
     color: #38bdf8;
+    margin-bottom: 15px;
 }
 
-.card p {
+.contact-info p {
     color: #cbd5e1;
+    line-height: 1.6;
 }
 
-/* ================= MENTORS ================= */
-.mentors-preview {
-    padding: 80px 60px;
-    text-align: center;
-    background: #0b1220;
-}
-
-.mentor-cards {
+.contact-form {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.mentor {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 15px;
-    width: 250px;
-    transition: 0.4s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
 }
 
-.mentor:hover {
-    transform: scale(1.05);
-    border-color: #38bdf8;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+.contact-form button {
+    padding: 12px;
+    background: #38bdf8;
+    border: none;
+    color: black;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.mentor h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
+.contact-form button:hover {
+    background: #0ea5e9;
 }
 
-.mentor p {
-    color: #94a3b8;
-}
-
-/* ================= SIDEBAR ================= */
-#sidebar-toggle {
-    display: none;
-}
-
-.sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background: #111827;
-    padding-top: 100px;
-    transition: 0.4s ease;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar ul li {
-    padding: 15px 30px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #ddd;
-    transition: 0.3s;
-}
-
-.sidebar ul li:hover {
-    background: #1f2937;
-}
-
-#sidebar-toggle:checked ~ .sidebar {
-    left: 0;
-}
-
-/* ================= CONTENT ================= */
-.content {
-    margin-top: 80px;
+.mentors-section{
+    padding: 10px;
+    padding-left: 20px;
 }

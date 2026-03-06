@@ -355,10 +355,10 @@ nav ul li a:hover{
 }
 
 .about {
-    padding: 120px 60px 60px 60px; /* top padding = space sa navbar, bottom padding = extra space sa baba */
+    padding: 120px 60px 60px 60px; 
     max-width: 5000px;
     margin: 0 auto;
-    background-color: rgba(15,23,42,0.9); /* optional, para readable */
+    background-color: rgba(15,23,42,0.9);
     border-radius: 8px;
     color: #fff;
 }
